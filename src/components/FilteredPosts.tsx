@@ -15,7 +15,7 @@ export default function FilteredPosts({ posts, categories }: Props) {
   const filtered = selected === ALL_POSTS ? posts : posts.filter((post) => post.category === selected);
 
   return (
-    <section className="flex m-3">
+    <section className="flex justify-between m-3">
       <PostsGrid posts={filtered} />
       <Categories categories={[ALL_POSTS, ...categories]} selected={selected} onClick={setSelected} />
     </section>
